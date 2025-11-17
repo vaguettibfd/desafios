@@ -2,138 +2,210 @@
 
 **ReactJS + Ant Design + LocalStorage ou Backend + DAOs**
 
-Este repositório reúne **10 desafios práticos completos**, projetados
-para reforçar habilidades em desenvolvimento front-end (e fullstack)
-utilizando tecnologias modernas e amplamente utilizadas no mercado.
+Este repositório reúne **10 desafios práticos completos**, projetados para reforçar habilidades em desenvolvimento front-end (e fullstack) utilizando tecnologias modernas e amplamente utilizadas no mercado.
 
 Todos os desafios seguem um padrão comum e incluem:
 
--   **3 CRUDs completos**, com relacionamentos entre entidades.\
--   **1 Relatório** que combina informações de pelo menos 2 CRUDs.\
--   **Requisitos funcionais e não funcionais padronizados**.\
--   **Flexibilidade de armazenamento**: LocalStorage **ou** Backend
-    (Node.js + MongoDB).\
--   **Uso obrigatório de DAOs**, independentemente do tipo de
-    persistência.
+- **3 CRUDs completos**, com relacionamentos entre entidades
+- **1 Relatório** que combina informações de pelo menos 2 CRUDs
+- **Requisitos funcionais e não funcionais padronizados**
+- **Flexibilidade de armazenamento**: LocalStorage **ou** Backend (Node.js + MongoDB)
+- **Uso obrigatório de DAOs**, independentemente da persistência escolhida
 
-Ideal para estudos, avaliações técnicas, desafios acadêmicos e
-construção de portfólio.
-
-------------------------------------------------------------------------
+---
 
 # 🧰 Tecnologias Utilizáveis
 
-### **Frontend (obrigatório)**
+## **Frontend (obrigatório)**
 
--   ReactJS\
--   Ant Design (AntD)\
--   Fetch API (quando houver backend)\
--   React Router (opcional e recomendado)
+- ReactJS  
+- Ant Design (AntD)  
+- Fetch API  
+- React Router (opcional)
 
-### **Persistência (flexível)**
+## **Persistência (flexível)**
 
-Você pode implementar o desafio de duas formas:
+### ✔ Usando LocalStorage  
+- DAOs encapsulando todas as operações
 
-### ✔ **1. Usando LocalStorage (sem backend)**
+### ✔ Usando Backend + MongoDB  
+- Node.js, Express, Mongoose  
+- DAOs integrados ao Model
 
--   Persistência feita no navegador\
--   DAOs implementados encapsulando operações de leitura/escrita no
-    localStorage
+---
 
-### ✔ **2. Usando Backend + MongoDB (opcional)**
+# 📌 Requisitos Não Funcionais (Comuns)
 
--   Node.js\
--   Express\
--   Mongoose\
--   Banco MongoDB local ou em nuvem\
--   DAOs implementados como classes responsáveis pela comunicação com o
-    Model Mongoose
+- ReactJS + AntD obrigatórios  
+- Persistência via LocalStorage **ou** backend, mas sempre com **DAOs**
+- Interface **responsiva**  
+- Formulários validados  
+- Feedback visual (loaders, mensagens, erros)  
+- Código limpo, modular e bem documentado  
 
-------------------------------------------------------------------------
+---
 
-# 📌 Requisitos Não Funcionais (Comuns a Todos os Desafios)
+# 🎯 Lista Completa dos 10 Desafios (com CRUDs detalhados)
 
-### **Tecnologias e Arquitetura**
+## **1 — Sistema de Biblioteca Universitária**
 
--   Frontend em **ReactJS** com **Ant Design**.\
--   Persistência de dados via **LocalStorage** ou via **Backend**, mas
-    **sempre** utilizando **DAOs** para separar regras de domínio da
-    persistência.\
--   Comunicação com backend via **fetch()**, quando existir.\
--   Estrutura modular: componentes, páginas, serviços, DAOs, modelos.
+### 📚 CRUD Livros  
+- título, ano, ISBN, categoria, autorId  
 
-### **Usabilidade**
+### 🖋 CRUD Autores  
+- nome, nacionalidade, dataNascimento  
 
--   Interface totalmente **responsiva** (desktop e mobile).\
--   Formulários validados.\
--   Feedback visual (mensagens, loaders, estados de erro).\
--   Boa organização e navegação intuitiva.
+### 🎓 CRUD Alunos  
+- nome, matrícula, curso  
 
-### **Qualidade e Organização**
+### 📊 Relatório  
+Livros emprestados por aluno
 
--   DAOs obrigatórios (mesmo usando LocalStorage).\
--   Separação de responsabilidades:
-    -   Componentes → interface\
-    -   Serviços → lógica\
-    -   DAOs → persistência\
--   Tratamento consistente de erros.\
--   Código limpo, reutilizável e bem documentado.
+---
 
-------------------------------------------------------------------------
+## **2 — Plataforma de Cursos Online**
 
-# 🎯 Lista Resumida dos 10 Desafios
+### 🎓 CRUD Cursos  
+- título, descrição, cargaHoraria, instrutorId  
 
-## 1 --- Sistema de Biblioteca Universitária
+### 👨‍🏫 CRUD Instrutores  
+- nome, especialidade, email  
 
-CRUDs: Livros, Autores, Alunos\
-Relatório: Livros emprestados por aluno
+### 🧑‍🎓 CRUD Alunos  
+- nome, email, dataCadastro  
 
-## 2 --- Plataforma de Cursos Online
+### 📊 Relatório  
+Inscrições por curso e instrutor
 
-CRUDs: Cursos, Instrutores, Alunos\
-Relatório: Inscrições por curso/instrutor
+---
 
-## 3 --- Gerenciador de Projetos e Tarefas
+## **3 — Gerenciador de Projetos e Tarefas**
 
-CRUDs: Projetos, Tarefas, Colaboradores\
-Relatório: Tarefas por projeto
+### 📁 CRUD Projetos  
+- nome, dataInicio, dataFim, gerenteId  
 
-## 4 --- Sistema de Restaurante / Pedidos
+### 📝 CRUD Tarefas  
+- título, status, prioridade, projetoId, colaboradorId  
 
-CRUDs: Pratos, Clientes, Pedidos\
-Relatório: Pedidos por cliente
+### 🧑‍💼 CRUD Colaboradores  
+- nome, cargo, email  
 
-## 5 --- Sistema de Academia
+### 📊 Relatório  
+Tarefas por projeto
 
-CRUDs: Alunos, Treinos, Professores\
-Relatório: Treinos por professor
+---
 
-## 6 --- Clínica Médica
+## **4 — Sistema de Restaurante e Pedidos**
 
-CRUDs: Pacientes, Médicos, Consultas\
-Relatório: Consultas por médico/paciente
+### 🍽 CRUD Pratos  
+- nome, preço, categoria, ingredientes  
 
-## 7 --- Controle de Estoque
+### 🧑 CRUD Clientes  
+- nome, telefone, endereço  
 
-CRUDs: Produtos, Fornecedores, Movimentações\
-Relatório: Saldo atualizado por produto
+### 🧾 CRUD Pedidos  
+- clienteId, itens, data, valorTotal  
 
-## 8 --- Sistema de Viagens e Turismo
+### 📊 Relatório  
+Pedidos por cliente
 
-CRUDs: Pacotes, Clientes, Reservas\
-Relatório: Reservas por destino
+---
 
-## 9 --- Plataforma de Eventos
+## **5 — Sistema de Academia**
 
-CRUDs: Eventos, Participantes, Ingressos\
-Relatório: Ocupação por evento
+### 🧍 CRUD Alunos  
+- nome, idade, objetivo, plano  
 
-## 10 --- Gestão Escolar
+### 🏋 CRUD Treinos  
+- alunoId, exercícios, frequência, professorId  
 
-CRUDs: Turmas, Professores, Alunos\
-Relatório: Alunos por professor
+### 🧑‍🏫 CRUD Professores  
+- nome, especialidade, registroProfissional  
 
-------------------------------------------------------------------------
+### 📊 Relatório  
+Treinos por professor
+
+---
+
+## **6 — Clínica Médica**
+
+### 🧑 CRUD Pacientes  
+- nome, cpf, dataNascimento  
+
+### 👨‍⚕ CRUD Médicos  
+- nome, especialidade, crm  
+
+### 🩺 CRUD Consultas  
+- pacienteId, medicoId, data, diagnóstico  
+
+### 📊 Relatório  
+Consultas por médico / paciente
+
+---
+
+## **7 — Controle de Estoque**
+
+### 📦 CRUD Produtos  
+- nome, quantidade, unidade, fornecedorId  
+
+### 🚚 CRUD Fornecedores  
+- nome, cnpj, telefone  
+
+### 🔄 CRUD Movimentações  
+- produtoId, tipo, quantidade, data  
+
+### 📊 Relatório  
+Saldo atualizado por produto
+
+---
+
+## **8 — Sistema de Viagens e Turismo**
+
+### 🧳 CRUD Pacotes  
+- destino, preço, dataIda, dataVolta  
+
+### 🧑 CRUD Clientes  
+- nome, email, telefone  
+
+### 📄 CRUD Reservas  
+- clienteId, pacoteId, dataReserva, valorPago  
+
+### 📊 Relatório  
+Reservas por destino
+
+---
+
+## **9 — Plataforma de Eventos**
+
+### 🎤 CRUD Eventos  
+- nome, local, capacidade, data  
+
+### 🧑 CRUD Participantes  
+- nome, email, telefone  
+
+### 🎫 CRUD Ingressos  
+- eventoId, participanteId, tipo, valor  
+
+### 📊 Relatório  
+Ocupação por evento
+
+---
+
+## **10 — Gestão Escolar**
+
+### 🏫 CRUD Turmas  
+- nome, ano, professorId  
+
+### 👨‍🏫 CRUD Professores  
+- nome, disciplina, email  
+
+### 🧑‍🎓 CRUD Alunos  
+- nome, idade, turmaId  
+
+### 📊 Relatório  
+Alunos por professor / turma
+
+---
 
 # 📁 Estrutura Recomendada de Pastas
 
@@ -154,7 +226,7 @@ Relatório: Alunos por professor
    ┗ server.js
 ```
 
-------------------------------------------------------------------------
+---
 
 # ⚙️ Instalação e Execução
 
@@ -198,3 +270,4 @@ MIT License.
     persistência.\
 -   O backend é **opcional** --- mas, se usar, deve seguir o padrão
     DAO + Mongoose.
+
