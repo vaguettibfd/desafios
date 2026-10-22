@@ -1,8 +1,8 @@
 # Desafios das Empresas
 ---
-[**COGMO**](https://github.com/vaguettibfd/desafios/blob/main/desafio_COGMO_frontend_adaptado.md)
+[**COGMO**](https://docs.google.com/document/d/1MY9i4IYO-HIrei2DIS9ZpXlBq1RALixgvXYJydinvg8/edit?usp=sharing)
 ---
-[**PRIMORA**](https://github.com/vaguettibfd/desafios/blob/main/desafio_COGMO_frontend_adaptado.md)
+[**PRIMORA**](https://docs.google.com/document/d/1AyeMdjw9moc2-4fqv2B9f1hq1LxBkYk21g-eJfc-aQ8/edit?usp=sharing)
 ---
 
 # Desafios do Professor
