@@ -1,4 +1,11 @@
-# 🚀 Coleção de 10 Desafios FrontEnd (podendo ser FullStack)
+# Desafios das Empresas
+
+[**COGMO**](https://github.com/vaguettibfd/desafios/blob/main/desafio_COGMO_frontend_adaptado.md)
+[**PRIMORA**](https://github.com/vaguettibfd/desafios/blob/main/desafio_COGMO_frontend_adaptado.md)
+
+#Desafios do Professor
+
+## 🚀 Coleção de 10 Desafios FrontEnd (podendo ser FullStack)
 
 **ReactJS + Ant Design + LocalStorage ou Backend + DAOs**
 
